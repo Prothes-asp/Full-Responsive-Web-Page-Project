@@ -1,0 +1,387 @@
+*{
+	margin:0px;
+	padding: 0px;
+	box-sizing: border-box;
+	text-decoration:none;
+	list-style:none;
+}
+
+/* ------   Basic Css Code Start Here --------  */
+.bdy{
+	height:840px;
+	width:100%;
+}
+.hedar{
+	height: 40px;
+	width:100%;
+}
+.left-hedar{
+	height:100%;
+	width:50%;
+	background-color:rgba(0,0,0,0.2);
+	float:left;
+}
+.right-icon{
+	height:100%;
+	width:50%;
+	background-color:rgba(0,0,0,0.2);
+	float:right;
+}
+.mnu{
+	height:50px;
+	width:100%;
+
+}
+.slider{
+	height:250px;
+	width:100%;
+}
+.content{
+	height:450px;
+	width:100%;
+}
+.left-content{
+	height:100%;
+	width:20%;
+	float:left;
+}
+.middle-content{
+	height:100%;
+	width:60%;
+	float:left;
+}
+.right-content{
+	height:100%;
+	width:20%;
+	float:right;
+}
+
+.footer{
+	height:50px;
+	width:100%;
+	background-color:black;
+}
+.text{
+	font-size:30px;
+    font-weight:bold;
+	margin-left:20px;
+	color:white;
+    	/*display:contents;*/
+}
+span{
+	font-size:30px;
+	float:right;
+	margin-right:25px;
+}
+
+/*Button Call*/
+.btn button{
+    height:50px;
+    width:50px;
+    border-radius:50%;
+    font-size:10px;
+    font-weight: bolder;
+    padding:10px;
+    position: fixed;
+    top:150px;
+}
+
+
+
+/* Responsive Menu Bar All Code Start Here */
+
+nav{
+			height:60px;
+			width: 100%;
+			background-color:#0a8aff;
+		}
+		.logo{
+			line-height:50px;/*Ata use korar ksron holo text gulo line er maje thakbe..height and line-height soman vabe lekha hole text auto maje chole ase   & ata logo er jonno lekha but chile img o use kora jay ..demo logo hisabe text use kora hoice*/
+			font-size:20px;
+			font-weight: bold;
+			font-family: Impact;
+			margin-left:35px;
+		}
+		nav ul{
+			float: right;
+			margin-right: 30px;
+		}
+		nav ul li{
+			display: inline-block;
+			margin-right:20px;
+			line-height:50px;/*Ata use korar ksron holo text gulo line er maje thakbe..height and line-height soman vabe lekha hole text auto maje chole ase*/
+		}
+		nav ul li a{
+			font-size:20px;
+			color: #fff;
+			font-family:Impact;
+			padding:7px 15px;
+			border-radius:2px;
+
+		}
+		.active.active,#linked:hover{
+			background-color:#defcd5;
+			color:black;
+			transition:1s;/*jate smoothly background show kore hover korle*/
+		}
+		.checkbtn{
+			font-size:30px;
+			color:#fff;
+			float:right;
+			margin:13px 20px 0px 0px;
+			cursor: pointer;
+			display: none;
+		}
+		#check{
+			display:none;
+		}
+
+
+/*REsponsive Slider All Css Code start Here*/
+.slider-main{
+	width:100%;
+	height:250px;
+	overflow:hidden;
+}
+.navigation{
+	position: absolute;
+	top: 285px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	/*Ai Code USe kora hoice bar take show koranor jonno but ai code tuku lagbe na*/
+  /*height:10px;
+	width:10px;
+    background-color:red;
+  */
+}
+.bar{
+	height:10px;
+	width:50px;
+	border:solid 3px #fff;
+	border-radius:10px;
+	margin:6px;
+	cursor:pointer;
+}
+input[name="asp"]{
+	position: absolute;
+	visibility: hidden;
+}
+.slides-sub{
+	height:100%;
+	width:500%;
+	display: flex;
+}
+.slide{
+	width:20%;
+	transition:0.6s;
+}
+.slide img{
+	width:100%;
+	height:250px;
+}
+#asp1:checked~.s1{margin-left:-0%;}
+#asp2:checked~.s1{margin-left:-20%;}
+#asp3:checked~.s1{margin-left:-40%;}
+#asp4:checked~.s1{margin-left:-60%;}
+#asp5:checked~.s1{margin-left:-8s0%;}
+
+
+
+
+/*Accrodium Project Code Start Now*/
+ 
+.accordion{
+    box-sizing:border-box;
+    display:flex;
+    overflow:hidden;
+    width:100%;
+    height:100%;
+    border-color: #335ea1;
+    border-style: solid;
+    border-width: 1px;
+    flex-direction: column;
+}
+.accordion-select{
+cursor:pointer;
+margin:0;
+z-index:1;
+opacity:0;
+margin-bottom: -65px;
+margin-right: 0;
+
+}
+.accordion-title{position:relative;
+
+}
+
+.accordion-title,
+.accordion-select  {
+    background-color: #F821C5;
+    color: #ffffff;
+    width: 100%;
+    height: 65px;
+    font-size: 20px;
+}
+
+
+
+.accordion-title:not(:nth-last-child(2))::after{
+border:1px solid transparent;
+bottom:0;
+content:'';
+left:0;
+position:absolute;
+right:0;
+top:0;
+    border-bottom-color: #568eea;
+    border-right-color: transparent;
+
+}
+
+.accordion-title span{bottom:0px;
+box-sizing:border-box;
+display:block;
+position:absolute;
+white-space:nowrap;
+width:100%;
+    padding-left: 33px;
+    padding-right: 33px;
+    line-height: 65px;
+    transform: rotate(0deg);
+	
+}
+
+.accordion-content{
+box-sizing:border-box;
+overflow:auto;
+position:relative;
+transition:margin 0.3s ease 0.1s;
+    background-color: #568eea;
+    color: #ffffff;
+    height: 190px;
+    margin-bottom: -190px;
+    margin-right: 0;
+    padding: 30px;
+    width: 100%;
+
+}
+
+.accordion-select:checked + .accordion-title + .accordion-content{
+margin-bottom:0;
+margin-right:0;
+}
+
+.accordion-select:hover + .accordion-title,
+.accordion-select:checked + .accordion-title {
+    background-color: #156dfd;
+} 
+
+
+
+
+/*-----Right Content blog e color picker code here-----*/
+
+.right-content .clr-piker{
+	margin-left:60px;
+	margin-top:140px;
+}
+
+input[type="text"]{
+	border-left:none;
+	border-right: none;
+	border-top:none;
+    outline: none;
+	border-radius:12px 12px 12px 12px;
+	width:65px;
+	border-color:green;
+	margin-left:15px;
+	margin-top:5px;
+}
+input[type="color"]{
+	height:100px;
+	width:100px;
+	outline: none;
+}
+h1{
+	margin-top:20px;
+}
+
+
+
+
+
+
+
+
+
+/*Media Quiry Apply Now by 3rd Method*/
+
+@media(min-width:1200px){
+
+            /*Extra large Device*/
+}
+
+@media(min-width:992px) and (max-width:1199px){
+
+            /*large Device*/
+            .text{margin-left:100px;}/*text left theke 100px margine debe jokhon large device e open hobe*/
+}
+
+@media(min-width:768px) and (max-width:991px){
+
+           /*Medium Device*/
+           .right-content{display: none;}/*ai section ti medium device e dekha jabe na*/
+           .middle-content{width:80%;}/*ai section ti porer div er jayga dokhol korbe*/
+           .hedar{height:80px; width:100%;}
+           .left-hedar{height:40px;width:100%;background-color:rgba(0,0,0,0.2);}
+           .right-icon{height:40px;width:100%;background-color:rgba(0,0,0,0.2);}
+           /*.text{display:inline-block; position:absolute;left:200px;}*/
+           .text{margin-left: 220px;}
+}
+
+@media(min-width:576px) and (max-width:767px){
+        /* Small Device*/
+        .right-content{display: none;}
+        .left-content{display: none;}
+        .middle-content{width:100%;}
+        .hedar{height:80px; width:100%;}
+        .left-hedar{height:40px;width:100%;background-color:rgba(0,0,0,0.2);}
+        .right-icon{height:40px;width:100%;background-color:rgba(0,0,0,0.2);}
+        .text{margin-left: 30px;}
+        span{font-size:25px; margin-top: 5px;}/*ata icon er jonno code*/
+
+    /*--------------------For Menu-----------------*/
+    .checkbtn{display: block;}
+    #check:checked~ul{
+    	left:0;
+    }
+    ul{position:fixed;width:100%;height:100vh;background:#535353;left:-100%;text-align:center;transition:all 0.5s;}
+    nav ul li{display:block;margin:50px 0px;line-height:30px;}
+    #linked:hover,.active.active{color:#0082e6;background:none;}
+    .logo{margin-left:48%;}
+}
+
+
+@media(max-width:575px){
+      /*Extra Small Device*/
+       .right-content{display: none;}
+        .left-content{display: none;}
+        .middle-content{width:100%;}
+        .hedar{height:80px; width:100%;}
+        .left-hedar{height:40px;width:100%;background-color:rgba(0,0,0,0.2);}
+        .right-icon{height:40px;width:100%;background-color:rgba(0,0,0,0.2);}
+        .text{margin-right: 30px; float: right;}
+        span{font-size:25px; margin-left: 5px; float:left}/*ata icon er jonno code left theke show korbe*/
+
+    /*--------------------For Menu-----------------*/
+    .checkbtn{display: block;}
+    #check:checked~ul{
+    	left:0;
+    }
+    ul{position:fixed;width:100%;height:100vh;background:#535353;left:-100%;text-align:center;transition:all 0.5s;}
+    nav ul li{display:block;margin:50px 0px;line-height:30px;}
+    #linked:hover,.active.active{color:#0082e6;background:none;}
+    .logo{margin-left:48%;}
+}
+
